@@ -1,15 +1,67 @@
 {
-  "name": "customreactui",
+  "name": "reactscrollup",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Streed12/customReactUIComponents.git"
+    "url": "https://github.com/STRsplit/reactScrollUp.git"
   },
-  "description": "A growing library of custom react ui components I make for different projects",
-  "main": "index.js",
+  "description": "Simple React component for scrolling browser view to top of page",
+  "main": "./dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava",
+    "build": "webpack --mode production && npm run tosrc",
+    "tosrc": "babel components --out-dir dist/components --copy-files"
   },
   "author": "Steven Reed",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.1.2",
+    "inline-style-prefixer": "^5.0.0",
+    "warning": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.1.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "ava": "1.0.0-rc.1",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.18",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-15": "^1.1.1",
+    "jsdom": "^12.2.0",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-scripts": "^2.0.0",
+    "react-test-renderer": "^16.6.0",
+    "sinon": "^7.1.0",
+    "webpack": "^4.20.2",
+    "webpack-bundle-analyzer": "^3.0.2",
+    "webpack-cli": "^3.1.1"
+  },
+  "ava": {
+    "files": [
+      "tests/*-test.js"
+    ],
+    "cache": true,
+    "failFast": true,
+    "failWithoutAssertions": false,
+    "verbose": true,
+    "require": [
+      "@babel/register",
+      "./tests/helpers/setup_test_env.js"
+    ],
+    "babel": {
+      "extensions": [
+        "js"
+      ],
+      "testOptions": {
+        "babelrc": true
+      }
+    }
+  }
 }

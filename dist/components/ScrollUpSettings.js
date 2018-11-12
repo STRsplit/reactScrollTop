@@ -46,7 +46,7 @@ const _setScrollUpDefault = ({
   backgroundColor,
   color
 }) => {
-  exports._scrollUpDefault = _scrollUpDefault = Object.assign({}, _scrollerDefault, {
+  exports._scrollUpDefault = _scrollUpDefault = Object.assign({}, _scrollUpDefault, {
     backgroundColor,
     color
   });

@@ -1,9 +1,9 @@
 {
-    "name": "react-scroll-up",
+    "name": "react-window-scroll-top",
     "version": "1.0.0",
     "repository": {
         "type": "git",
-        "url": "https://github.com/STRsplit/reactScrollUp.git"
+        "url": "https://github.com/STRsplit/reactScrollTop.git"
     },
     "description": "Simple React component for scrolling browser view to top of page",
     "main": "./dist/index.js",

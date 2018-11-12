@@ -4,7 +4,7 @@ import { shallow, mount, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-15';
 import sinon from 'sinon';
 
-import ScrollUp from '../components/ScrollUp';
+import ScrollTop from '../components/ScrollTop';
 
 configure({ adapter: new Adapter() });
 
@@ -25,11 +25,11 @@ class WrapperComponent extends React.Component {
     }
 }
 test('Basic render is successful ', (t) => {
-    const wrapper = mount(<ScrollUp />);
+    const wrapper = mount(<ScrollTop />);
     t.is(wrapper.exists('button'), true);
 });
 test('Component mounts with default props', (t) => {
-    const wrapper = mount(<ScrollUp />);
+    const wrapper = mount(<ScrollTop />);
     t.truthy(wrapper.props().defaultStyle);
     t.is(wrapper.props().delay, 15);
     t.is(wrapper.props().placement, 'bottom');
@@ -37,14 +37,14 @@ test('Component mounts with default props', (t) => {
     t.is(wrapper.props().text, 'top');
 });
 test('ScrollUp Component renders with correct props', (t) => {
-    const wrapper = mount(<ScrollUp text="Scroll Top"/>);
+    const wrapper = mount(<ScrollTop text="Scroll Top"/>);
     t.is(wrapper.props().text, 'Scroll Top');
     const button = wrapper.find('button');
     t.is(button.hasClass('move-top'), true);
     t.is(button.props().children, 'Scroll Top');
 });
 test('ScrollUp Component sets height and width as size passed in', (t) => {
-    const wrapper = mount(<ScrollUp text="hello" />);
+    const wrapper = mount(<ScrollTop text="hello" />);
     const button = wrapper.find('button');
 
     t.is(wrapper.find('button').prop('style').height, '80px');
@@ -59,7 +59,7 @@ test('ScrollUp Component styles are overwritten by props passed into the compone
         'backgroundColor': 'rgba(255, 0, 0, 0.8)',
         'right': '2vw'
     };
-    const wrapper = mount(<ScrollUp text="hello" styles={styles} />);
+    const wrapper = mount(<ScrollTop text="hello" styles={styles} />);
     const button = wrapper.find('button');
 
     t.is(button.prop('style').right, '2vw');
@@ -69,14 +69,12 @@ test('ScrollUp Component styles are overwritten by props passed into the compone
 });
 
 test('ScrollUp Component - if children are passed, will render children inside div instead of default button', (t) => {
-    const wrapper = mount(<ScrollUp><span className="span_scroll">Test</span></ScrollUp>);
+    const wrapper = mount(<ScrollTop><span className="span_scroll">Test</span></ScrollTop>);
     const instance = wrapper.instance();
-    const spy = sinon.spy(instance, 'handleMouseOver');
     instance.forceUpdate();
 
     const container = wrapper.find('.move-top');
     t.truthy(container.children().length);
-    const scrollupChild = wrapper.find('.span_scroll');
     t.is(wrapper.exists('.span_scroll'), true)
 });
 
@@ -86,7 +84,7 @@ test('ScrollUp Component methods are called as expected', (t) => {
         'right': '2vw'
     };
 
-    const wrapper = mount(<ScrollUp text="hello" styles={styles} />);
+    const wrapper = mount(<ScrollTop text="hello" styles={styles} />);
     const instance = wrapper.instance();
     const spy = sinon.spy(instance, 'handleMouseOver');
     instance.forceUpdate();
@@ -102,7 +100,7 @@ test('scrollUp is called onclick of the scroll item', (t) => {
         'backgroundColor': 'rgba(255, 0, 0, 0.8)',
         'right': '2vw'
     };
-    const wrapper = mount(<ScrollUp text="hello" styles={styles} />);
+    const wrapper = mount(<ScrollTop text="hello" styles={styles} />);
     const instance = wrapper.instance();
     const spy = sinon.spy(instance, 'scrollUp');
     instance.forceUpdate();

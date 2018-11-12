@@ -1,2 +1,2 @@
-import _ScrollUp from './components/ScrollUp';
-export { _ScrollUp as ScrollUp }
+import _ScrollTop from './components/ScrollTop';
+export { _ScrollTop as ScrollTop }

@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import warning from 'warning';
 import { prefix } from 'inline-style-prefixer';
-import { _scrollUpDefault, _scrollUpDefaultProps, _scrollUpHover,  _setScrollUpDefault } from './ScrollUpSettings.js';
+import { _scrollTopDefault, _scrollTopDefaultProps, _scrollTopHover,  _setScrollTopDefault } from './ScrollTopSettings.js';
 
-class ScrollUp extends React.Component {
+class ScrollTop extends React.Component {
     state = {
         listenerOn: false,
         show: false
@@ -12,7 +12,7 @@ class ScrollUp extends React.Component {
     
     checkProps = () => {
         const { defaultStyle } = this.props;
-        let propSet = new Set([...Object.keys(_scrollUpDefaultProps)], [...Object.keys(defaultStyle)])
+        let propSet = new Set([...Object.keys(_scrollTopDefaultProps)], [...Object.keys(defaultStyle)])
 
         let propsGood = [true, []];
         (() => {
@@ -49,7 +49,7 @@ class ScrollUp extends React.Component {
             }
         }
 
-        _setScrollUpDefault(defaultStyle);
+        _setScrollTopDefault(defaultStyle);
         return Object.assign({}, { ...prefix(defaultStyle) }, {
             height: size,
             width: size,
@@ -59,13 +59,13 @@ class ScrollUp extends React.Component {
     }
 
     handleMouseOut = event => {
-        const { backgroundColor, color } = _scrollUpDefault;
+        const { backgroundColor, color } = _scrollTopDefault;
         event.target.style.backgroundColor = backgroundColor;
         event.target.style.color = color;
     }
 
     handleMouseOver = event => {
-        const { scrollerHover = _scrollUpHover } = this.props;
+        const { scrollerHover = _scrollTopHover } = this.props;
         const { backgroundColor, color } = scrollerHover;
         event.target.style.backgroundColor = backgroundColor;
         event.target.style.color = color;
@@ -135,15 +135,15 @@ class ScrollUp extends React.Component {
     }
 }
 
-ScrollUp.defaultProps = {
-    ..._scrollUpDefaultProps
+ScrollTop.defaultProps = {
+    ..._scrollTopDefaultProps
 }
 
-ScrollUp.propTypes = {
+ScrollTop.propTypes = {
     delay: PropTypes.number,
     text: PropTypes.string,
     placement: PropTypes.string,
     size: PropTypes.number,
     styles: PropTypes.object
 };
-export default ScrollUp;
+export default ScrollTop;

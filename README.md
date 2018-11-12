@@ -1,4 +1,4 @@
-# react-scroll-up
+# react-window-scroll-top
 
 Just a simple component that scrolls view to top of page.
 ![](reactScrollUp.gif)
@@ -6,7 +6,7 @@ Just a simple component that scrolls view to top of page.
 ## Installation
 
 ```
-npm install --save react-scroll-up
+npm install --save react-window-scroll-top
 ```
 ### Dependencies
 - React ^15.6.1
@@ -17,7 +17,7 @@ There are two main ways to use the module, either leave standard and pass in pro
 ### Standard
 ```
 import React, { Component } from 'react';
-import { ScrollUp } from 'react-scroll-up';
+import { ScrollTop } from 'react-window-scroll-top';
 import './App.css';
 
 class App extends Component {
@@ -28,7 +28,7 @@ class App extends Component {
           <img src="https://somelogo.png" className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to Our App</h1>
         </header>
-        <ScrollUp 
+        <ScrollTop 
             delay={2} 
             placement="bottom" 
             size="80px"
@@ -45,7 +45,7 @@ class App extends Component {
 ### With Children
 ```
 import React, { Component } from 'react';
-import { ScrollUp } from 'react-scroll-up';
+import { ScrollTop } from 'react-window-scroll-top';
 import './App.css';
 
 class App extends Component {
@@ -56,11 +56,11 @@ class App extends Component {
           <img src="https://somelogo.png" className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <ScrollUp 
+        <ScrollTop
             delay={2}
         >
             <button>Scroll up</button>
-        </ScrollUp>
+        </ScrollTop>
         <p className="App-intro">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           ... lots of text

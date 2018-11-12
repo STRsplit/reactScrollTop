@@ -1,27 +1,25 @@
 {
-  "presets": [
-    [
-      "@babel/preset-env",
-      {
-        "targets": {
-          "node": "current"
-        }
-      }
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "node": "current"
+                }
+            }
+        ],
+        "@babel/preset-react"
     ],
-    "@babel/preset-react"
-  ],
-  "plugins": [
-    "babel-plugin-transform-react-remove-prop-types",
-    ["@babel/plugin-proposal-decorators", {
-        "decoratorsBeforeExport": true
-      }
-    ],
-    [
-      "@babel/plugin-proposal-class-properties",
-      {
-        "loose": true
-      }
-    ],
-    "@babel/plugin-proposal-object-rest-spread"
-  ]
+    "plugins": [
+        "babel-plugin-transform-react-remove-prop-types",
+        [   
+            "@babel/plugin-proposal-decorators", 
+            { "decoratorsBeforeExport": true }
+        ],
+        [
+            "@babel/plugin-proposal-class-properties", 
+            { "loose": true }
+        ],
+        "@babel/plugin-proposal-object-rest-spread"
+    ]
 }

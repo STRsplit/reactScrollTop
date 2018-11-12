@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import warning from 'warning';
 import { prefix } from 'inline-style-prefixer';
-import { _scrollerDefault, _scrollerDefaultProps, _scrollerHover,  _setScrollerDefault } from './ScrollUpSettings.js';
+import { _scrollUpDefault, _scrollUpDefaultProps, _scrollUpHover,  _setScrollUpDefault } from './ScrollUpSettings.js';
 
-class Scroller extends React.Component {
+class ScrollUp extends React.Component {
     state = {
         listenerOn: false,
         show: false
@@ -12,7 +12,7 @@ class Scroller extends React.Component {
     
     checkProps = () => {
         const { defaultStyle } = this.props;
-        let propSet = new Set([...Object.keys(_scrollerDefaultProps)], [...Object.keys(defaultStyle)])
+        let propSet = new Set([...Object.keys(_scrollUpDefaultProps)], [...Object.keys(defaultStyle)])
 
         let propsGood = [true, []];
         (() => {
@@ -59,13 +59,13 @@ class Scroller extends React.Component {
     }
 
     handleMouseOut = event => {
-        const { backgroundColor, color } = _scrollerDefault;
+        const { backgroundColor, color } = _scrollUpDefault;
         event.target.style.backgroundColor = backgroundColor;
         event.target.style.color = color;
     }
 
     handleMouseOver = event => {
-        const { scrollerHover = _scrollerHover } = this.props;
+        const { scrollerHover = _scrollUpHover } = this.props;
         const { backgroundColor, color } = scrollerHover;
         event.target.style.backgroundColor = backgroundColor;
         event.target.style.color = color;
@@ -135,15 +135,15 @@ class Scroller extends React.Component {
     }
 }
 
-Scroller.defaultProps = {
-    ..._scrollerDefaultProps
+ScrollUp.defaultProps = {
+    ..._scrollUpDefaultProps
 }
 
-Scroller.propTypes = {
+ScrollUp.propTypes = {
     delay: PropTypes.number,
     text: PropTypes.string,
     placement: PropTypes.string,
     size: PropTypes.number,
     styles: PropTypes.object
 };
-export default Scroller;
+export default ScrollUp;

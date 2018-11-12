@@ -1,5 +1,5 @@
 {
-    "name": "reactscrollup",
+    "name": "react-scroll-up",
     "version": "1.0.0",
     "repository": {
         "type": "git",
@@ -14,6 +14,18 @@
     },
     "author": "Steven Reed",
     "license": "ISC",
+    "keywords": [
+        "react",
+        "react scroll",
+        "react scroll component",
+        "scroll top",
+        "scroll top react",
+        "scroll up react",
+        "scroller react",
+        "window scroll react",
+        "window scroll top",
+        "window scroller react"
+    ],
     "dependencies": {
         "@babel/cli": "^7.1.2",
         "inline-style-prefixer": "^5.0.0",

@@ -21,7 +21,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-class Scroller extends _react.default.Component {
+class ScrollUp extends _react.default.Component {
   constructor(...args) {
     super(...args);
     this.state = {
@@ -33,7 +33,7 @@ class Scroller extends _react.default.Component {
       const {
         defaultStyle
       } = this.props;
-      let propSet = new Set([...Object.keys(_ScrollUpSettings._scrollerDefaultProps)], [...Object.keys(defaultStyle)]);
+      let propSet = new Set([...Object.keys(_ScrollUpSettings._scrollUpDefaultProps)], [...Object.keys(defaultStyle)]);
       let propsGood = [true, []];
 
       (() => {
@@ -81,7 +81,8 @@ class Scroller extends _react.default.Component {
         }
       }
 
-      (0, _ScrollUpSettings._setScrollerDefault)(defaultStyle);
+      _setScrollerDefault(defaultStyle);
+
       return Object.assign({}, _objectSpread({}, (0, _inlineStylePrefixer.prefix)(defaultStyle)), {
         height: size,
         width: size,
@@ -94,14 +95,14 @@ class Scroller extends _react.default.Component {
       const {
         backgroundColor,
         color
-      } = _ScrollUpSettings._scrollerDefault;
+      } = _ScrollUpSettings._scrollUpDefault;
       event.target.style.backgroundColor = backgroundColor;
       event.target.style.color = color;
     };
 
     this.handleMouseOver = event => {
       const {
-        scrollerHover = _ScrollUpSettings._scrollerHover
+        scrollerHover = _ScrollUpSettings._scrollUpHover
       } = this.props;
       const {
         backgroundColor,
@@ -175,6 +176,6 @@ class Scroller extends _react.default.Component {
 
 }
 
-Scroller.defaultProps = _objectSpread({}, _ScrollUpSettings._scrollerDefaultProps);
-var _default = Scroller;
+ScrollUp.defaultProps = _objectSpread({}, _ScrollUpSettings._scrollUpDefaultProps);
+var _default = ScrollUp;
 exports.default = _default;

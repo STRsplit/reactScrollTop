@@ -1,12 +1,12 @@
-let _scrollerDefault = {
+let _scrollUpDefault = {
     backgroundColor: 'rgba(255, 255, 255, .8)',
     color: '#000'
 }
-let _scrollerHover = {
+let _scrollUpHover = {
     backgroundColor: 'rgba(0, 0, 0, 1)',
     color: '#FFF'
 }
-let _scrollerDefaultProps = {
+let _scrollUpDefaultProps = {
     defaultStyle: {
         boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.5)',
         borderRadius: '50%', 
@@ -32,8 +32,8 @@ let _scrollerDefaultProps = {
     size: '80px',
     text: 'top'
   };
-const _setScrollerDefault = ({ backgroundColor, color }) => {
-    _scrollerDefault = Object.assign({}, _scrollerDefault, { backgroundColor, color });
+const _setScrollUpDefault = ({ backgroundColor, color }) => {
+    _scrollUpDefault = Object.assign({}, _scrollerDefault, { backgroundColor, color });
 }
 
-export { _scrollerDefault, _scrollerDefaultProps, _scrollerHover, _setScrollerDefault }
+export { _scrollUpDefault, _scrollUpDefaultProps, _scrollUpHover, _setScrollUpDefault }

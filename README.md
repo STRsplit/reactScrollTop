@@ -1,4 +1,4 @@
-# React Scroll Up
+# react-scroll-up
 
 Just a simple component that scrolls view to top of page.
 ![](reactScrollUp.gif)
@@ -6,7 +6,7 @@ Just a simple component that scrolls view to top of page.
 ## Installation
 
 ```
-npm install --save reactScrollUp
+npm install --save react-scroll-up
 ```
 ### Dependencies
 - React ^15.6.1
@@ -17,7 +17,7 @@ There are two main ways to use the module, either leave standard and pass in pro
 ### Standard
 ```
 import React, { Component } from 'react';
-import { ScrollUp } from 'reactscrollup';
+import { ScrollUp } from 'react-scroll-up';
 import './App.css';
 
 class App extends Component {
@@ -45,7 +45,7 @@ class App extends Component {
 ### With Children
 ```
 import React, { Component } from 'react';
-import { ScrollUp } from 'reactscrollup';
+import { ScrollUp } from 'react-scroll-up';
 import './App.css';
 
 class App extends Component {

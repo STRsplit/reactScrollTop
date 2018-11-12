@@ -102,7 +102,7 @@ test('scrollUp is called onclick of the scroll item', (t) => {
         'backgroundColor': 'rgba(255, 0, 0, 0.8)',
         'right': '2vw'
     };
-    const wrapper = mount(<ScrollUp text="hello" {...styles} />);
+    const wrapper = mount(<ScrollUp text="hello" styles={styles} />);
     const instance = wrapper.instance();
     const spy = sinon.spy(instance, 'scrollUp');
     instance.forceUpdate();

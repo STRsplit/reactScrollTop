@@ -2,10 +2,12 @@ let _scrollUpDefault = {
     backgroundColor: 'rgba(255, 255, 255, .8)',
     color: '#000'
 }
+
 let _scrollUpHover = {
     backgroundColor: 'rgba(0, 0, 0, 1)',
     color: '#FFF'
 }
+
 let _scrollUpDefaultProps = {
     defaultStyle: {
         boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.5)',
@@ -31,9 +33,10 @@ let _scrollUpDefaultProps = {
     scrollOffset: 20,
     size: '80px',
     text: 'top'
-  };
+};
+
 const _setScrollUpDefault = ({ backgroundColor, color }) => {
-    _scrollUpDefault = Object.assign({}, _scrollerDefault, { backgroundColor, color });
+    _scrollUpDefault = Object.assign({}, _scrollUpDefault, { backgroundColor, color });
 }
 
 export { _scrollUpDefault, _scrollUpDefaultProps, _scrollUpHover, _setScrollUpDefault }

@@ -49,7 +49,7 @@ class ScrollUp extends React.Component {
             }
         }
 
-        _setScrollerDefault(defaultStyle);
+        _setScrollUpDefault(defaultStyle);
         return Object.assign({}, { ...prefix(defaultStyle) }, {
             height: size,
             width: size,

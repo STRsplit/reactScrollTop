@@ -49,6 +49,8 @@
         "enzyme-adapter-react-15": "^1.1.1",
         "jsdom": "^12.2.0",
         "prop-types": "^15.5.10",
+        "react": "^15.6.1",
+        "react-dom": "^15.6.1",
         "react-scripts": "^2.0.0",
         "react-test-renderer": "^16.6.0",
         "sinon": "^7.1.0",

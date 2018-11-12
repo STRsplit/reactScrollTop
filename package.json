@@ -5,7 +5,7 @@
         "type": "git",
         "url": "https://github.com/STRsplit/reactScrollTop.git"
     },
-    "description": "Simple React component for scrolling browser view to top of page",
+    "description": "Simple React component for scrolling to top of the browser window",
     "main": "./dist/index.js",
     "scripts": {
         "test": "ava",

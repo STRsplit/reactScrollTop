@@ -1,6 +1,7 @@
 # React Scroll Up
 
 Just a simple component that scrolls view to top of page.
+![](reactScrollUp.gif)
 
 ## Installation
 
@@ -9,7 +10,6 @@ npm install --save reactScrollUp
 ```
 ### Dependencies
 - React ^15.6.1
-- React-dom ^15.6.1
 
 ## How To Use
 There are two main ways to use the module, either leave standard and pass in props to change the look and functionality, or have in encapsulate children elements and only take care of the scrolling part.

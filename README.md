@@ -15,7 +15,7 @@ npm install --save react-window-scroll-top
 There are two main ways to use the module, either leave standard and pass in props to change the look and functionality, or have in encapsulate children elements and only take care of the scrolling part.
 
 ### Standard
-```
+```javascript
 import React, { Component } from 'react';
 import { ScrollTop } from 'react-window-scroll-top';
 import './App.css';
@@ -43,7 +43,7 @@ class App extends Component {
 ```
 
 ### With Children
-```
+```javascript
 import React, { Component } from 'react';
 import { ScrollTop } from 'react-window-scroll-top';
 import './App.css';
